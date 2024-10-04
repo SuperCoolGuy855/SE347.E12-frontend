@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { SidebarListUserComponent } from './sidebar-list-user.component';
 
@@ -8,7 +9,8 @@ describe('SidebarListUserComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SidebarListUserComponent ]
+      declarations: [ SidebarListUserComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
 

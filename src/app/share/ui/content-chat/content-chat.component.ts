@@ -1,6 +1,6 @@
 import { UserService } from './../../services/user/user.service';
 import { ConversationCreateModel } from './../../models/conversation.model';
-import { ConversationService } from './../../services/conversition/conversation.service';
+import { ConversationService } from './../../services/conversation/conversation.service';
 import { TokenStorageService } from './../../services/token-storage/token-storage.service';
 import { UserModel } from './../../models/user.model';
 import { MessageModel } from './../../models/message.model';

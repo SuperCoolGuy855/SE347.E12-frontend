@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ConversationModel } from '../../models/conversation.model';
 import { AddMemberModalComponent } from '../modal/add-member-modal/add-member-modal.component';
-import { ConversationService } from '../../services/conversition/conversation.service';
+import { ConversationService } from '../../services/conversation/conversation.service';
 
 @Component({
   selector: 'app-option-chat',

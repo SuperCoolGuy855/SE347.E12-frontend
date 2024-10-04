@@ -1,5 +1,5 @@
 import { ConversationModel } from 'src/app/share/models/conversation.model';
-import { ConversationService } from './../services/conversition/conversation.service';
+import { ConversationService } from './../services/conversation/conversation.service';
 import {Injectable, OnDestroy} from '@angular/core';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {catchError, finalize, tap} from 'rxjs/operators';

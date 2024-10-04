@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ChatComponent } from './chat.component';
+// import { ConversationService } from '../../share/services/conversation/conversation.service'; // Adjust the import path as necessary
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
@@ -8,7 +9,9 @@ describe('ChatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChatComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ ChatComponent ],
+      // providers: [ ConversationService ] // Ensure your service is provided
     })
     .compileComponents();
 

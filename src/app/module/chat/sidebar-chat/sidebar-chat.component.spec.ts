@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { SidebarChatComponent } from './sidebar-chat.component';
 
@@ -8,7 +9,8 @@ describe('SidebarChatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SidebarChatComponent ]
+      declarations: [ SidebarChatComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
 

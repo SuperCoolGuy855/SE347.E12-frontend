@@ -1,5 +1,5 @@
 import { TokenStorageService } from './../../../services/token-storage/token-storage.service';
-import { ConversationService } from './../../../services/conversition/conversation.service';
+import { ConversationService } from './../../../services/conversation/conversation.service';
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 

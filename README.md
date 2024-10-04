@@ -1,5 +1,59 @@
-# ChatSupporter
+# Architecture
+```mermaid
+graph BT;
+    A[App Module] -->|contains| B[AppComponent]
+    A -->|contains| C[AppRoutingModule]
 
+    D[Auth Module] -->|contains| E[AuthComponent]
+    E -->|contains| F[LoginComponent]
+    E -->|contains| G[RegisterComponent]
+    D -->|contains| H[AuthService]
+    H -->|API Calls| I[api/auth/login]
+    H -->|API Calls| J[api/auth/register]
+    H -->|API Calls| K[api/auth/refreshToken]
+    H -->|API Calls| L[api/auth/changePassword]
+    D -->|contains| M[AuthGuard]
+
+    N[Chat Module] -->|contains| O[ChatComponent]
+    N -->|contains| P[SidebarChatComponent]
+    N -->|contains| Q[ChatService]
+    Q -->|API Calls| R[api/conversations]
+    Q -->|API Calls| S[api/messages/conversation]
+
+    T[Home Chat Module] -->|contains| U[HomeChatComponent]
+    T -->|contains| V[HomeChatRoutingModule]
+
+    W[List User Module] -->|contains| X[ListUserComponent]
+    W -->|contains| Y[SidebarListUserComponent]
+    W -->|contains| Z[SuggestionUserComponent]
+    W -->|contains| AA[UserService]
+    AA -->|API Calls| AB[api/users]
+    AA -->|API Calls| AC[api/users/me]
+
+    AD[Shared Module] -->|contains| AE[AuthService]
+    AD -->|contains| AF[UserService]
+    AD -->|contains| AG[ConversationService]
+    AD -->|contains| AH[FriendService]
+    AD -->|contains| AI[SocketIOService]
+
+    AJ[API Service] -->|API Calls| AK[api/auth/login]
+    AJ -->|API Calls| AL[api/auth/register]
+    AJ -->|API Calls| AM[api/auth/refreshToken]
+    AJ -->|API Calls| AN[api/auth/changePassword]
+    AJ -->|API Calls| AO[api/conversations]
+    AJ -->|API Calls| AP[api/messages/conversation]
+    AJ -->|API Calls| AQ[api/users]
+    AJ -->|API Calls| AR[api/users/me]
+    AJ -->|API Calls| AS[api/friends]
+    AJ -->|API Calls| AT[api/friends/request]
+
+    AU[Models] -->|contains| AV[UserModel]
+    AU -->|contains| AW[ConversationModel]
+    AU -->|contains| AX[MessageModel]
+
+```
+
+# ChatSupporter
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
 ## Development server

@@ -3,7 +3,7 @@ import { UserState } from './../../share/state/user.state';
 import { UserModel } from 'src/app/share/models/user.model';
 import { TokenStorageService } from './../../share/services/token-storage/token-storage.service';
 import { ConversationModel } from './../../share/models/conversation.model';
-import { ConversationService } from './../../share/services/conversition/conversation.service';
+import { ConversationService } from './../../share/services/conversation/conversation.service';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { SocketIoService } from 'src/app/share/services/socketio/socket-io.service';
 

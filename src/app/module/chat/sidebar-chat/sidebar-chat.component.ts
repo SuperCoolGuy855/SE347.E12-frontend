@@ -3,7 +3,7 @@ import { UserState } from './../../../share/state/user.state';
 import { SocketIoService } from './../../../share/services/socketio/socket-io.service';
 import { ConversationState } from './../../../share/state/conversation.state';
 import { ConversationCreateModel } from './../../../share/models/conversation.model';
-import { ConversationService } from './../../../share/services/conversition/conversation.service';
+import { ConversationService } from './../../../share/services/conversation/conversation.service';
 import { AddMemberModalComponent } from './../../../share/ui/modal/add-member-modal/add-member-modal.component';
 import { ContentChatComponent } from './../../../share/ui/content-chat/content-chat.component';
 import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, OnChanges, SimpleChanges, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
